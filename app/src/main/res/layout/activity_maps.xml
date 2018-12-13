@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.main.MapsActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <Button
+            android:text="@string/get_response"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGetResponse" android:layout_marginTop="8dp" map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintStart_toStartOf="parent" map:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:onClick="justDoIt"/>
+</android.support.constraint.ConstraintLayout>

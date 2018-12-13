@@ -1,0 +1,227 @@
+-----------------------------------com.example.Example.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"message",
+"request",
+"response"
+})
+public class Example {
+
+@JsonProperty("message")
+private String message;
+@JsonProperty("request")
+private Request request;
+@JsonProperty("response")
+private List<Response> response = null;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("message")
+public String getMessage() {
+return message;
+}
+
+@JsonProperty("message")
+public void setMessage(String message) {
+this.message = message;
+}
+
+@JsonProperty("request")
+public Request getRequest() {
+return request;
+}
+
+@JsonProperty("request")
+public void setRequest(Request request) {
+this.request = request;
+}
+
+@JsonProperty("response")
+public List<Response> getResponse() {
+return response;
+}
+
+@JsonProperty("response")
+public void setResponse(List<Response> response) {
+this.response = response;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Request.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"altitude",
+"datetime",
+"latitude",
+"longitude",
+"passes"
+})
+public class Request {
+
+@JsonProperty("altitude")
+private Integer altitude;
+@JsonProperty("datetime")
+private Integer datetime;
+@JsonProperty("latitude")
+private Double latitude;
+@JsonProperty("longitude")
+private Double longitude;
+@JsonProperty("passes")
+private Integer passes;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("altitude")
+public Integer getAltitude() {
+return altitude;
+}
+
+@JsonProperty("altitude")
+public void setAltitude(Integer altitude) {
+this.altitude = altitude;
+}
+
+@JsonProperty("datetime")
+public Integer getDatetime() {
+return datetime;
+}
+
+@JsonProperty("datetime")
+public void setDatetime(Integer datetime) {
+this.datetime = datetime;
+}
+
+@JsonProperty("latitude")
+public Double getLatitude() {
+return latitude;
+}
+
+@JsonProperty("latitude")
+public void setLatitude(Double latitude) {
+this.latitude = latitude;
+}
+
+@JsonProperty("longitude")
+public Double getLongitude() {
+return longitude;
+}
+
+@JsonProperty("longitude")
+public void setLongitude(Double longitude) {
+this.longitude = longitude;
+}
+
+@JsonProperty("passes")
+public Integer getPasses() {
+return passes;
+}
+
+@JsonProperty("passes")
+public void setPasses(Integer passes) {
+this.passes = passes;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Response.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"duration",
+"risetime"
+})
+public class Response {
+
+@JsonProperty("duration")
+private Integer duration;
+@JsonProperty("risetime")
+private Integer risetime;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("duration")
+public Integer getDuration() {
+return duration;
+}
+
+@JsonProperty("duration")
+public void setDuration(Integer duration) {
+this.duration = duration;
+}
+
+@JsonProperty("risetime")
+public Integer getRisetime() {
+return risetime;
+}
+
+@JsonProperty("risetime")
+public void setRisetime(Integer risetime) {
+this.risetime = risetime;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}

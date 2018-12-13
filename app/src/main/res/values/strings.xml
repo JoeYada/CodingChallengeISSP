@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CodingChallengeISSP</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="get_response">Get Response</string>
+</resources>
